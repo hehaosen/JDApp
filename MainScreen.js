@@ -18,10 +18,18 @@ export default class MainScreen extends Component {
         return (
             <View style={{flex:1}}>
                 <Header />
-                <TabNavigator>
+                <TabNavigator tabBarStyle={styles.tab}>
 
                 </TabNavigator>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    tab: {
+        height: 52,
+        backgroundColor: '#333333',
+        alignItems: 'center'
+    }
+});
