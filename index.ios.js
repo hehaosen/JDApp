@@ -13,14 +13,16 @@ import {
     Image,
     TextInput
 } from 'react-native';
+import Header from './Header';
 import MainScreen from './MainScreen';
 
 class JdApp extends Component {
     render() {
         return (
             <View>
-                <Header />
+                <MainScreen>
 
+                </MainScreen>
             </View>
         );
     }
