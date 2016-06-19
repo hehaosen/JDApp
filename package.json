@@ -9,6 +9,7 @@
     "react": "^15.1.0",
     "react-native": "0.27.2",
     "react-native-tab-navigator": "^0.3.2",
-    "react-native-video": "^0.8.0"
+    "react-native-video": "^0.8.0",
+    "react-native-viewpager": "^0.2.9"
   }
 }
