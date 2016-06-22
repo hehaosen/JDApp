@@ -7,16 +7,18 @@ import {
     Text,
     View,
     Image,
-    TextInput
+    TextInput,
+    TouchableWithoutFeedback,
+    PropTypes,
 } from 'react-native';
 
 export default class MenuButton extends Component {
 
     static propTypes = {
-        renderIcon: PropTypes.number.isRequired,  // 图片,加入.isRequired即为比填项
-        showText: PropTypes.string,  // 显示标题\文字
-        tag: PropTypes.string,  // Tag
-        onClick: PropTypes.func  // 回调函数
+        renderIcon: React.PropTypes.number.isRequired,  // 图片,加入.isRequired即为比填项
+        showText: React.PropTypes.string,  // 显示标题\文字
+        tag: React.PropTypes.string,  // Tag
+        onClick: React.PropTypes.func  // 回调函数
     };
 
     _onClick() {
@@ -47,5 +49,8 @@ const styles = StyleSheet.create({
         width: 38,
         height: 38,
         marginBottom: 2
+    },
+    showText: {
+        fontSize: 12
     }
 });

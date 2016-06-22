@@ -11,6 +11,7 @@ import {
     RefreshControl
 } from 'react-native';
 import ViewPager from 'react-native-viewpager';
+import MenuButton from './MenuButton';
 
 const BANNER_IMGS = [
     require('./images/banner/1.jpg'),
@@ -43,6 +44,7 @@ export default class HomePage extends Component {
 
     render() {
         return (
+
             <View>
                 <ViewPager
                     style={{height:130}}
@@ -50,7 +52,22 @@ export default class HomePage extends Component {
                     renderPage={this._renderPage}
                     isLoop={true}
                     autoPlay={true}/>
+                <View style={styles.menuView}>
+                    <MenuButton renderIcon={require('./images/home_icons/wdgz.png')}
+                                showText={'我的关注'} tag={'wdgz'}
+                                onClick={this._onMenuClick}/>
+                    <MenuButton renderIcon={require('./images/home_icons/wlcx.png')}
+                                showText={'物流查询'} tag={'wlcx'}
+                                onClick={this._onMenuClick}/>
+                    <MenuButton renderIcon={require('./images/home_icons/cz.png')}
+                                showText={'充值'} tag={'cz'}
+                                onClick={this._onMenuClick}/>
+                    <MenuButton renderIcon={require('./images/home_icons/dyp.png')}
+                                showText={'电影票'} tag={'dyp'}
+                                onClick={this._onMenuClick}/>
+                </View>
             </View>
+
         )
     }
 }
