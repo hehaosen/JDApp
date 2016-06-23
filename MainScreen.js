@@ -82,6 +82,8 @@ const styles = StyleSheet.create({
         height: 52,
         backgroundColor: '#303030',
         alignItems: 'center',
+        position: 'relative',
+        bottom: 0,
     },
     tabIcon: {
         width: 30,
