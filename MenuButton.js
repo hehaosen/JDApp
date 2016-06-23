@@ -10,9 +10,11 @@ import {
     TextInput,
     TouchableWithoutFeedback,
     PropTypes,
+    Alert,
 } from 'react-native';
 
 export default class MenuButton extends Component {
+
 
     static propTypes = {
         renderIcon: React.PropTypes.number.isRequired,  // 图片,加入.isRequired即为比填项
@@ -22,9 +24,10 @@ export default class MenuButton extends Component {
     };
 
     _onClick() {
-        if (this.props.onClick) {   // 在设置了回调函数的情况下
-            this.props.onClick(this.props.showText, this.props.tag);  // 回调Title和Tag
-        }
+        Alert.alert('提示', '你点击了:' + this.props.showText + " Tag:" + this.props.tag);
+        //if (this.props.onClick) {   // 在设置了回调函数的情况下
+        //    this.props.onClick(this.props.showText, this.props.tag);  // 回调Title和Tag
+        //}
     }
 
     constructor(props) {
