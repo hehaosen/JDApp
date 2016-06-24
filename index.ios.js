@@ -18,8 +18,8 @@ import MainScreen from './MainScreen';
 class JdApp extends Component {
     render() {
         return (
-            <View>
-                <MainScreen>
+            <View style={styles.container}>
+                <MainScreen >
 
                 </MainScreen>
             </View>
@@ -28,6 +28,9 @@ class JdApp extends Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    }
 });
 
 AppRegistry.registerComponent('JdApp', () => JdApp);

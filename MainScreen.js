@@ -46,13 +46,14 @@ export default class MainScreen extends Component {
                 renderSelectedIcon={() => <Image style={styles.tabIcon} source={selectedImg}/>}
                 onPress={() => this.setState({ selectedTab: tag })}>
                 {childView}
+
             </TabNavigator.Item>
         );
     }
 
     _createChildView(tag) {
         return (
-            <View style={{flex:1,backgroundColor:'#00baff',alignItems:'center',justifyContent:'center'}}>
+            <View style={{flex:1,backgroundColor:'#00baff',alignItems:'center',justifyContent:'center', height:200}}>
                 <Text style={{fontSize:22}}>{tag}</Text>
             </View>
         )
@@ -60,10 +61,9 @@ export default class MainScreen extends Component {
 
     render() {
         return (
-            <View style={{flex:1}}>
+            <View style={{flex:1, backgroundColor: '#000000'}}>
                 <Header />
                 <HomePage />
-
                 <TabNavigator hidesTabTouch={true} tabBarStyle={styles.tab}>
                     {this._renderTabItem(HOME_NORMAL, HOME_FOCUS, HOME, this._createChildView(HOME))}
                     {this._renderTabItem(CATEGORY_NORMAL, CATEGORY_FOCUS, CATEGORY, this._createChildView(CATEGORY))}
