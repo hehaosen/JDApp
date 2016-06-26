@@ -53,7 +53,7 @@ export default class MainScreen extends Component {
 
     _createChildView(tag) {
         return (
-            <View style={{flex:1,backgroundColor:'#00baff',alignItems:'center',justifyContent:'center', height:200}}>
+            <View style={styles.childView}>
                 <Text style={{fontSize:22}}>{tag}</Text>
             </View>
         )
@@ -61,7 +61,7 @@ export default class MainScreen extends Component {
 
     render() {
         return (
-            <View style={{flex:1, backgroundColor: '#000000'}}>
+            <View style={{flex:1, backgroundColor: 'red'}}>
                 <Header />
                 <HomePage />
                 <TabNavigator hidesTabTouch={true} tabBarStyle={styles.tab}>
@@ -90,5 +90,11 @@ const styles = StyleSheet.create({
         height: 35,
         resizeMode: 'stretch',
         marginTop: 12.5
+    },
+    childView:{
+        flex:1,
+        backgroundColor: '#00baff',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });
